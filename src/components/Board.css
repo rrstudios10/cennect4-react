@@ -1,0 +1,62 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(7, 100px);
+  grid-template-rows: repeat(7, 100px);
+  width: 750px;
+  height: 750px;
+  justify-content: center;
+  align-content: center;
+  gap: 4px;
+}
+
+.board .tile {
+  width: 100px;
+  height: 100px;
+  background-color: #ade4db;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.board .arrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.board .arrow:hover {
+  cursor: pointer;
+  background-color: #dedede;
+  transition: ease 0.3s;
+}
+
+@keyframes popUpAnim {
+  from {
+    scale: 0;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+.pop-up {
+  animation: popUpAnim 0.3s;
+}
+
+@keyframes winAnim {
+  0%,
+  100% {
+    background-color: #ade4db;
+  }
+  50% {
+    background-color: #b3f8ed;
+  }
+}
+
+.win-tile {
+  animation: winAnim 1s infinite;
+}

@@ -1,0 +1,67 @@
+.score {
+  font-size: 1.5rem;
+  gap: 30px;
+}
+
+.score .p1-p2-grid {
+  font-size: 1.5rem;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 10px repeat(2, 1fr);
+  grid-template-areas:
+    "a b c"
+    "d e f";
+
+  justify-items: center;
+  align-items: center;
+  column-gap: 20px;
+  row-gap: 10px;
+}
+
+.grid-area-c {
+  grid-area: c;
+  justify-self: end;
+}
+
+.grid-area-f {
+  grid-area: f;
+  justify-self: end;
+}
+
+.grid-area-b {
+  grid-area: b;
+  justify-self: start;
+}
+
+.grid-area-e {
+  grid-area: e;
+  justify-self: start;
+}
+
+.score-title {
+  font-size: 3rem;
+}
+
+.controls {
+  padding-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.circular-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ebebeb;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 30%;
+}
+
+.circular-button:hover {
+  cursor: pointer;
+  background-color: #e2e2e2;
+  transition: ease 0.3s;
+}
